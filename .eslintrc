@@ -1,13 +1,20 @@
 {
-  "parser": "babel-eslint",
-  "plugins": [],
+  "plugins": [
+    "react"
+  ],
   "env": {
+    "es6": true,
     "node": true,
     "browser": true,
-    "jasmine": true,
-    "phantomjs": true
+    "jasmine": true
   },
-  "ecmaFeatures": {},
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "no-alert": 0,
     "no-array-constructor": 0,
@@ -93,7 +100,7 @@
     "no-sparse-arrays": 2,
     "no-sync": 0,
     "no-ternary": 0,
-    "no-trailing-spaces": 0,
+    "no-trailing-spaces": 2,
     "no-this-before-super": 0,
     "no-throw-literal": 0,
     "no-undef": 2,
@@ -143,7 +150,7 @@
     "guard-for-in": 0,
     "handle-callback-err": 0,
     "id-length": 0,
-    "indent": 0,
+    "indent": ["error", 2],
     "init-declarations": 0,
     "jsx-quotes": [1, "prefer-double"],
     "key-spacing": [0, { "beforeColon": false, "afterColon": true }],
@@ -176,8 +183,7 @@
     "semi": [2, "always"],
     "semi-spacing": [0, {"before": false, "after": true}],
     "sort-vars": 0,
-    "space-after-keywords": [2, "always"],
-    "space-before-keywords": [0, "always"],
+    "keyword-spacing": 2,
     "space-before-blocks": [0, "always"],
     "space-before-function-paren": [1, {"anonymous": "always", "named": "never"}],
     "space-in-parens": [0, "never"],
@@ -192,6 +198,7 @@
     "vars-on-top": 0,
     "wrap-iife": 0,
     "wrap-regex": 0,
-    "yoda": [0, "never"]
+    "yoda": [0, "never"],
+    "react/jsx-uses-vars": 1
   }
 }
